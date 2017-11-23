@@ -39,6 +39,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enum\PipelineID.cs" />
     <Compile Include="GuessTheNumberPipelines.cs" />
     <Compile Include="Pipes\TryAgainPipe.cs" />
     <Compile Include="Pipes\InvalidAnswerPipe.cs" />

@@ -53,6 +53,23 @@
         }
 
         /// <summary>
+        /// Gets the pipes from the given pipeline and sets in this pipeline chain.
+        /// </summary>
+        /// <param name="id">Enum of the pipeline ID to get the pipes from</param>
+        /// <returns>This builder instance, so you can use it in a fluent fashion</returns>
+        public PipelineBuilder Pipe(Enum id) => 
+            Pipe(id.ToString());
+
+        /// <summary>
+        /// Constructs a new pipeline with the given ID and sets its pipes in this pipeline chain.
+        /// </summary>
+        /// <param name="id">Enum of the pipeline ID that has been constructed in this call</param>
+        /// <param name="pipelineBuilder">An action that builds the new pipeline</param>
+        /// <returns>This builder instance, so you can use it in a fluent fashion</returns>
+        public PipelineBuilder Pipeline(Enum id, Action<PipelineBuilder> pipelineBuilder) =>
+            Pipeline(id.ToString(), pipelineBuilder);
+
+        /// <summary>
         /// Constructs a new pipeline with the given ID and sets its pipes in this pipeline chain.
         /// </summary>
         /// <param name="id">ID of the pipeline been constructed in this call</param>

@@ -11,7 +11,7 @@
         public GuessTheNumberPipelines()
         {
             // Registering a new pipeline with an ID of "guess_the_number".
-            Pipeline("guess_the_number")
+            Pipeline(PipelineID.GuessTheNumber)
 
                 // Instantiating a pipe and adding it to the pipeline.
                 .Pipe(new RandomNumberPipe(1 , 10))
